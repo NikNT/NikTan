@@ -1,0 +1,45 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+
+  background: url("../../assets/grid.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.name {
+  font-family: "Libre Barcode 39 Text", cursive;
+
+  font-size: 15vh;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.title {
+  font-family: "Outfit", sans-serif;
+  font-weight: 100;
+  font-size: 3vh;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .name {
+    font-size: 8vh;
+  }
+
+  .title {
+    margin-top: 10px;
+    font-size: 2vh;
+    font-weight: 100;
+  }
+}
