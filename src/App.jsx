@@ -1,13 +1,11 @@
-// import React from "react";
-
+import AboutMe from "./pages/AboutMe/AboutMe";
 import LandingPage from "./pages/LandingPage/LandingPage";
-// import SecondPage from "./pages/SecondPage";
 
 const App = () => {
   return (
     <>
       <LandingPage />
-      {/* <SecondPage /> */}
+      <AboutMe />
     </>
   );
 };
