@@ -1,0 +1,69 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: url("../../assets/half-grid.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading {
+  text-align: center;
+  width: 100%;
+  height: 64px;
+  color: #fff;
+  font-size: 5vh;
+  font-family: "Outfit", sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.heading span {
+  margin-top: 2px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 64px);
+  width: 90%;
+}
+
+.avatar img {
+  height: 50vh;
+}
+
+.info {
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-size: 2.5vh;
+  font-weight: 300;
+  width: 70%;
+  height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.info p {
+  text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    flex-direction: column;
+  }
+  .avatar img {
+    height: 25vh;
+  }
+
+  .info {
+    font-size: 2vh;
+  }
+}
