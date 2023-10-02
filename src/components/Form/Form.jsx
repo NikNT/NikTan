@@ -8,6 +8,11 @@ const Form = ({ onClose }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const nameRegex = /^[A-Za-z ]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const messageRegex = /^[a-zA-Z0-9.,!?()\s]+$/;
+
   const handleClose = () => {
     onClose();
     document.body.style.overflow = "auto";
@@ -26,8 +31,41 @@ const Form = ({ onClose }) => {
     });
   };
 
+  const emptyFieldsError = () => {
+    toast.error("Please fill in all the fields!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (name === "" || email === "" || message === "") {
+      emptyFieldsError();
+      return;
+    }
+
+    if (!nameRegex.test(name)) {
+      toast.error("Enter First Name or Complete Name");
+      return;
+    }
+
+    if (!emailRegex.test(email)) {
+      toast.error("Enter valid email!");
+      return;
+    }
+
+    if (!messageRegex.test(message) || message.length < 2) {
+      toast.error("Enter a valid message");
+      return;
+    }
+
     firestore
       .collection("messages")
       .add({
@@ -56,6 +94,7 @@ const Form = ({ onClose }) => {
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          // pattern="^[A-Za-z ]+$"
         />
       </div>
       <div>
@@ -64,6 +103,7 @@ const Form = ({ onClose }) => {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
         />
       </div>
       <div>
@@ -75,6 +115,8 @@ const Form = ({ onClose }) => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           maxLength="500"
+          pattern="^[a-zA-Z0-9.,!?()\s]+$"
+          // required
         />
       </div>
       <div style={{ fontFamily: "Outfit" }}>
