@@ -10,6 +10,7 @@ const Form = ({ onClose }) => {
   const [message, setMessage] = useState("");
   const handleClose = () => {
     onClose();
+    document.body.style.overflow = "auto";
   };
 
   const notification = () => {

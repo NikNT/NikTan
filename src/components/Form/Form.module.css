@@ -12,7 +12,6 @@
   background: url("../../assets/grid.jpg");
   background-position: center;
   background-size: cover;
-  overflow-y: hidden !important;
   font-family: "Outfit";
 }
 
