@@ -1,0 +1,80 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("../../assets/grid.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow-y: hidden !important;
+  font-family: "Outfit";
+}
+
+input,
+textarea {
+  background: #1d1d1d;
+  outline: none;
+  color: #fff;
+
+  width: 400px;
+  max-width: 400px;
+
+  padding: 20px 30px;
+  border-radius: 4px;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  font-family: "Outfit", sans-serif;
+}
+
+textarea {
+  min-height: 207px;
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaaaaa;
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+}
+
+input,
+textarea,
+button {
+  border: none;
+}
+
+.form_buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form_buttons button {
+  padding: 5px 10px;
+  background: transparent;
+  color: #fff;
+  font-family: "Outfit";
+  font-size: 2.5vh;
+  border: none;
+  border-radius: 8px;
+}
+
+.form_buttons button:hover {
+  background-color: #1d1d1d;
+  transition: 0.3s all ease-in;
+  cursor: pointer;
+  border: none;
+}
+
+@media only screen and (max-width: 600px) {
+  input,
+  textarea {
+    width: 350px;
+  }
+}

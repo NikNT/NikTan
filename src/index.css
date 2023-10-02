@@ -8,10 +8,6 @@
 }
 
 body {
-  overflow-x: hidden;
-
-  background: url("./assets/grid-flipped.jpg");
-  background-size: contain;
-
-  background-position: center;
+  overflow-x: hidden !important;
+  overflow: hidden;
 }

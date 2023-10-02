@@ -1,7 +1,19 @@
+import { useState } from "react";
+import Button from "../../components/Button/Button";
+import Form from "../../components/Form/Form";
 import styles from "./LandingPage.module.css";
 import { motion } from "framer-motion";
 
 const LandingPage = () => {
+  const [showForm, setShowForm] = useState(false);
+  const openForm = () => {
+    setShowForm(true);
+    document.body.style.overflow = "hidden";
+  };
+  const closeForm = () => {
+    setShowForm(false);
+    document.body.style.overflow = "auto";
+  };
   return (
     <>
       <motion.div
@@ -14,6 +26,15 @@ const LandingPage = () => {
           ease: [0, 0.71, 0.2, 1.01],
         }}
       >
+        <div className={styles.button} onClick={openForm}>
+          <Button />
+        </div>
+        {showForm && (
+          <div className={styles.form}>
+            <Form onClose={closeForm} />
+          </div>
+        )}
+
         <h1 className={styles.name}>Nikhil Tanwar</h1>
         <span className={styles.title}>Front End Dev</span>
       </motion.div>

@@ -15,8 +15,8 @@ const AboutMe = () => {
             <div>
               <strong>Me</strong>
               <p>Hi</p>
-              <p>I'm Nikhil</p>
-              <p>I love ReactJS, XBox Series S, and Pizza!</p>
+              <p>Im Nikhil</p>
+              <p>I love ReactJS, XBox Series S, and Pizza 🍕</p>
             </div>
             <br />
             <div>
@@ -47,8 +47,8 @@ const AboutMe = () => {
                 <strong>Fav Quote</strong>
                 <p>
                   <em>
-                    "One last drink and the bottle breaks, returning us to the
-                    dust from whence we came"
+                    One last drink and the bottle breaks, returning us to the
+                    dust from whence we came
                   </em>
                 </p>
               </p>

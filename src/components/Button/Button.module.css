@@ -1,0 +1,26 @@
+.topButton {
+  padding: 5px 10px;
+  background: transparent;
+  color: #fff;
+  font-family: "Outfit";
+  font-size: 2vh;
+  margin: 2vh;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topButton:hover {
+  background-color: #1d1d1d;
+  /* color: #1d1d1d; */
+  transition: 0.3s all ease-in;
+  cursor: pointer;
+  border: none;
+}
+
+.hello {
+  height: 2vh;
+  margin: 2px;
+}
