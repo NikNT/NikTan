@@ -45,18 +45,15 @@
   font-family: "Outfit";
   font-weight: 200;
   display: flex;
-  /* justify-content: space-between; */
   gap: 2vw;
   margin: 1vh;
-  /* width: 35%; */
-  /* background: red; */
 }
 
 .links span img:nth-child(1) {
   /* background-color: red; */
 }
 
-.links span img {
+.link {
   height: 3vh;
   /* border-radius: 50%; */
 }

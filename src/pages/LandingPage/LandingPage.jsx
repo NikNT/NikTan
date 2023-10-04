@@ -41,13 +41,19 @@ const LandingPage = () => {
         <span className={styles.title}>Front End Dev</span>
         <div className={styles.links}>
           <span>
-            <img src={linkedin} alt="" />
+            <a href="https://www.linkedin.com/in/nikhil-tanwar-76b247128/">
+              <img src={linkedin} alt="" className={styles.link} />
+            </a>
           </span>
           <span>
-            <img src={github} alt="" />
+            <a href="https://github.com/NikNT">
+              <img src={github} alt="GitHub" className={styles.link} />
+            </a>
           </span>
           <span>
-            <img src={resume} alt="" />
+            <a href="https://drive.google.com/file/d/1jQQNu0ypywifmuxGpnef0c7biaQYsNS7/view">
+              <img src={resume} alt="Resume" className={styles.link} />
+            </a>
           </span>
         </div>
       </motion.div>
