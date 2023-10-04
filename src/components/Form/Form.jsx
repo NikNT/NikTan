@@ -1,88 +1,39 @@
 import { useState } from "react";
 import styles from "./Form.module.css";
-import { firestore } from "../../firebase";
-import PropTypes from "prop-types";
 import { toast } from "react-toastify";
+import { successNotification } from "../../utils/Notifications/Notifications";
+import { checkInput } from "../../utils/Validation/Validation";
+import PropTypes from "prop-types";
+import { addMessageToFirestore } from "../../utils/Firestore/Firestore";
 
 const Form = ({ onClose }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const nameRegex = /^[A-Za-z ]+$/;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const messageRegex = /^[a-zA-Z0-9.,!?()\s]+$/;
-
   const handleClose = () => {
     onClose();
     document.body.style.overflow = "auto";
   };
 
-  const notification = () => {
-    toast.success("Your message has been sent!", {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
-  };
-
-  const emptyFieldsError = () => {
-    toast.error("Please fill in all the fields!", {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name === "" || email === "" || message === "") {
-      emptyFieldsError();
+    const errorMessage = checkInput(name, email, message);
+    if (errorMessage) {
+      toast.error(errorMessage);
       return;
     }
 
-    if (!nameRegex.test(name)) {
-      toast.error("Enter First Name or Complete Name");
-      return;
-    }
-
-    if (!emailRegex.test(email)) {
-      toast.error("Enter valid email!");
-      return;
-    }
-
-    if (!messageRegex.test(message) || message.length < 2) {
-      toast.error("Enter a valid message");
-      return;
-    }
-
-    firestore
-      .collection("messages")
-      .add({
-        name,
-        email,
-        message,
-      })
-      .then(() => {
-        setName("");
-        setEmail("");
-        setMessage("");
-        notification();
-        onClose();
-      })
-      .catch((error) => {
-        console.error("Error submitting form data:", error);
-      });
+    addMessageToFirestore(
+      name,
+      email,
+      message,
+      setName,
+      setEmail,
+      setMessage,
+      successNotification,
+      onClose
+    );
   };
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
@@ -94,7 +45,6 @@ const Form = ({ onClose }) => {
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          // pattern="^[A-Za-z ]+$"
         />
       </div>
       <div>
@@ -103,7 +53,6 @@ const Form = ({ onClose }) => {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
         />
       </div>
       <div>
@@ -115,13 +64,13 @@ const Form = ({ onClose }) => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           maxLength="500"
-          pattern="^[a-zA-Z0-9.,!?()\s]+$"
-          // required
         />
       </div>
-      <div style={{ fontFamily: "Outfit" }}>
-        {500 - message.length} characters remaining
-      </div>
+      {message.length > 0 && (
+        <div className={styles.character_count}>
+          {500 - message.length} characters remaining
+        </div>
+      )}
       <div className={styles.form_buttons}>
         <button type="submit">Send</button>
         <button type="button" onClick={handleClose}>

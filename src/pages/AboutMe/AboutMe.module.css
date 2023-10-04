@@ -11,18 +11,6 @@
   flex-direction: column;
 }
 
-.heading {
-  text-align: center;
-  width: 100%;
-  height: 64px;
-  color: #fff;
-  font-size: 5vh;
-  font-family: "Outfit", sans-serif;
-  font-weight: 100;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
-}
-
 .heading span {
   margin-top: 2px;
 }
@@ -62,6 +50,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .container {
+    height: calc(100vh + 90px);
+  }
   .content {
     flex-direction: column;
   }

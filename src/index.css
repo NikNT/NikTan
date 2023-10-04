@@ -16,3 +16,15 @@ body {
   width: 100%;
   height: 210vh;
 }
+
+.heading {
+  text-align: center;
+  width: 100%;
+  height: 64px;
+  color: #fff;
+  font-size: 5vh;
+  font-family: "Outfit", sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}

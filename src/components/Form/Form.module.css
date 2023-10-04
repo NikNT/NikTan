@@ -71,6 +71,11 @@ button {
   border: none;
 }
 
+.character_count {
+  font-family: "Outfit";
+  font-size: 1.5vh;
+}
+
 @media only screen and (max-width: 600px) {
   input,
   textarea {

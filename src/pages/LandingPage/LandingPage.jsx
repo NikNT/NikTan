@@ -3,6 +3,9 @@ import Button from "../../components/Button/Button";
 import Form from "../../components/Form/Form";
 import styles from "./LandingPage.module.css";
 import { motion } from "framer-motion";
+import github from "../../assets/github.png";
+import linkedin from "../../assets/linked.png";
+import resume from "../../assets/resume.png";
 
 const LandingPage = () => {
   const [showForm, setShowForm] = useState(false);
@@ -34,9 +37,19 @@ const LandingPage = () => {
             <Form onClose={closeForm} />
           </div>
         )}
-
         <h1 className={styles.name}>Nikhil Tanwar</h1>
         <span className={styles.title}>Front End Dev</span>
+        <div className={styles.links}>
+          <span>
+            <img src={linkedin} alt="" />
+          </span>
+          <span>
+            <img src={github} alt="" />
+          </span>
+          <span>
+            <img src={resume} alt="" />
+          </span>
+        </div>
       </motion.div>
     </>
   );

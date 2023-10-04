@@ -41,6 +41,26 @@
   left: 0;
 }
 
+.links {
+  font-family: "Outfit";
+  font-weight: 200;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 2vw;
+  margin: 1vh;
+  /* width: 35%; */
+  /* background: red; */
+}
+
+.links span img:nth-child(1) {
+  /* background-color: red; */
+}
+
+.links span img {
+  height: 3vh;
+  /* border-radius: 50%; */
+}
+
 @media only screen and (max-width: 600px) {
   .name {
     font-size: 8vh;
@@ -50,5 +70,12 @@
     margin-top: 10px;
     font-size: 2vh;
     font-weight: 100;
+  }
+
+  .links {
+    font-size: 2vh;
+    width: 45%;
+    margin-top: 2vh;
+    justify-content: space-evenly;
   }
 }
