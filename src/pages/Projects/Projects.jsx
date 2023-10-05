@@ -1,3 +1,4 @@
+import Card from "../../components/Card/Card";
 import styles from "./Projects.module.css";
 
 const Projects = () => {
@@ -5,6 +6,10 @@ const Projects = () => {
     <div className={styles.container}>
       <div className="heading">
         <span>My projects</span>
+      </div>
+      <div className={styles.project_cards}>
+        <Card />
+        <Card />
       </div>
     </div>
   );
