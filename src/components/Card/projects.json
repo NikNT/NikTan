@@ -8,19 +8,19 @@
     "technologiesUsed": [
       {
         "name": "React",
-        "icon": "src/assets/react.png"
+        "icon": "/images/react.png"
       },
       {
         "name": "React Bootstrap",
-        "icon": "src/assets/react-bootstrap.png"
+        "icon": "/images/react-bootstrap.png"
       },
       {
         "name": "Faker API",
-        "icon": "src/assets/faker.svg"
+        "icon": "/images/faker.svg"
       },
       {
         "name": "AWS Cognito",
-        "icon": "src/assets/aws-cognito.png"
+        "icon": "/images/aws-cognito.png"
       }
     ]
   },
@@ -32,27 +32,27 @@
     "technologiesUsed": [
       {
         "name": "Mongo",
-        "icon": "src/assets/mongo.png"
+        "icon": "/images/mongo.png"
       },
       {
         "name": "Express",
-        "icon": "src/assets/express.png"
+        "icon": "/images/express.png"
       },
       {
         "name": "React",
-        "icon": "src/assets/react.png"
+        "icon": "/images/react.png"
       },
       {
         "name": "Node",
-        "icon": "src/assets/node.png"
+        "icon": "/images/node.png"
       },
       {
         "name": "Redux",
-        "icon": "src/assets/redux.png"
+        "icon": "/images/redux.png"
       },
       {
         "name": "Docker",
-        "icon": "src/assets/docker.png"
+        "icon": "/images/docker.png"
       }
     ]
   },
@@ -64,11 +64,11 @@
     "technologiesUsed": [
       {
         "name": "React",
-        "icon": "src/assets/react.png"
+        "icon": "/images/react.png"
       },
       {
         "name": "API",
-        "icon": "src/assets/api.png"
+        "icon": "/images/api.png"
       }
     ]
   }

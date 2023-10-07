@@ -91,3 +91,7 @@
   height: 3vh;
   margin-top: 2px;
 }
+
+a {
+  text-decoration: none;
+}
