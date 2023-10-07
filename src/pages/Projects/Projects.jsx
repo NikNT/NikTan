@@ -9,7 +9,6 @@ const Projects = () => {
       </div>
       <div className={styles.project_cards}>
         <Card />
-        <Card />
       </div>
     </div>
   );
