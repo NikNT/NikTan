@@ -3,8 +3,9 @@
     "id": "1",
     "title": "ReactJS Shopping Cart",
     "description": "Developed a feature-rich Shopping Cart application in ReactJS and React Bootstrap. Utilized Context API and useReducer Hook for efficient state management. Integrated AWS Cognito for secure user authentication and authorization. Successfully deployed the application on AWS Cloudfront for optimal performance.",
-    "image": "src/assets/project-1.png",
-    "link": "https://ecom-jitto.vercel.app/",
+    "image": "/images/project-1.png",
+    "link": "https://github.com/NikNT/ecomjitto",
+    "deployment": "https://ecom-jitto.vercel.app/",
     "technologiesUsed": [
       {
         "name": "React",
@@ -28,7 +29,8 @@
     "id": "2",
     "title": "MERN Real-Time Voice Chat",
     "description": "Created a cutting-edge real-time voice chat app using the MERN stack, facilitating interactive user communication. Employed JWT-based authentication for secure access and WebSocket API for live communication. Integrated Twilio for enhanced voice capabilities. Leveraged Docker and AWS for seamless deployment and scalability.",
-    "image": "src/assets/project-3.png",
+    "image": "/images/project-3.png",
+    "link": "https://github.com/NikNT/VR1",
     "technologiesUsed": [
       {
         "name": "Mongo",
@@ -60,7 +62,9 @@
     "id": "3",
     "title": "Movieland - ReactJS Movie Search Application",
     "description": "Created a dynamic movie search app in ReactJS, utilizing the OMDB API for real-time movie data retrieval. Designed an engaging user interface featuring a search bar and interactive movie cards for seamless navigation.",
-    "image": "src/assets/project-2.png",
+    "image": "/images/project-2.png",
+    "link": "https://github.com/NikNT/PracticeCodes/tree/main/5.%20React%20JSMastery/movieland",
+    "deployment": "https://movieland-nik.netlify.app/",
     "technologiesUsed": [
       {
         "name": "React",

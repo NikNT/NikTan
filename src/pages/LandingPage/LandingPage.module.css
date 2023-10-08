@@ -49,9 +49,9 @@
   margin: 1vh;
 }
 
-.links span img:nth-child(1) {
-  /* background-color: red; */
-}
+/* .links span img:nth-child() {
+  background-color: red;
+} */
 
 .link {
   height: 3vh;

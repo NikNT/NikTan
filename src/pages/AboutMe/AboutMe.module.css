@@ -2,7 +2,7 @@
   height: 100vh;
   width: 100vw;
   background: url("../../assets/half-grid.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 

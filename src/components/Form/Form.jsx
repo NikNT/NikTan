@@ -72,7 +72,9 @@ const Form = ({ onClose }) => {
         </div>
       )}
       <div className={styles.form_buttons}>
-        <button type="submit">Send</button>
+        <button type="submit">
+          <strong>Send</strong>
+        </button>
         <button type="button" onClick={handleClose}>
           Close
         </button>

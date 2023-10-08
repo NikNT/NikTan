@@ -1,10 +1,9 @@
 .card_container {
-  /* width: 1011px; */
-  width: 80%;
-  min-width: 1011px;
+  width: 70%;
+  /* min-width: 1011px; */
   background-color: #1d1d1d;
   /* height: 393px; */
-  height: 65vh;
+  height: 60vh;
   border-radius: 12px;
   margin-top: 2vh;
   display: flex;
@@ -40,13 +39,19 @@
 
 .project_title {
   font-size: 3.5vh;
-  font-weight: 200;
+  font-weight: 100;
 }
 
 .project_description {
   font-size: 2.5vh;
   font-weight: 100;
   text-align: justify;
+}
+
+.project_buttons {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .project_button {
@@ -64,6 +69,15 @@
   gap: 10px;
 }
 
+.project_deploy {
+  background-color: #3944bc;
+}
+
+.project_deploy:hover {
+  background-color: #1338be !important;
+  transition: 0.3s all ease-in-out;
+}
+
 .project_button img {
   height: 40%;
   border-radius: 50%;
@@ -75,6 +89,9 @@
   transition: 0.3s all ease-in-out;
 }
 
+.project_deploy {
+}
+
 .technologies {
   height: 10%;
   width: 30%;
@@ -82,16 +99,54 @@
 
 .technologies_list {
   display: flex;
-  /* justify-content: space-between; */
   gap: 15px;
 }
 
 .technologies_list img {
-  /* height: 20px; */
   height: 3vh;
   margin-top: 2px;
 }
 
 a {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .card_container {
+    flex-direction: column;
+    width: 90%;
+    height: 65vh;
+  }
+
+  .project_image {
+    width: 100%;
+  }
+
+  .project_image img {
+    margin-top: 20px;
+    border-radius: 12px;
+    object-fit: contain;
+  }
+
+  .project_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .project_title {
+    font-size: 2.8vh;
+  }
+
+  .project_description {
+    font-size: 1.8vh;
+    line-height: 2.5vh;
+  }
+
+  .technologies_list img {
+    height: 2vh;
+  }
 }
