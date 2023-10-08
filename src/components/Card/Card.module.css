@@ -30,7 +30,7 @@
 .project_image img {
   /* height: 353px;
   width: 462px; */
-  height: 92%;
+  height: 88%;
   width: 90%;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
@@ -89,9 +89,6 @@
   transition: 0.3s all ease-in-out;
 }
 
-.project_deploy {
-}
-
 .technologies {
   height: 10%;
   width: 30%;
@@ -115,7 +112,7 @@ a {
   .card_container {
     flex-direction: column;
     width: 90%;
-    height: 65vh;
+    height: 68vh;
   }
 
   .project_image {

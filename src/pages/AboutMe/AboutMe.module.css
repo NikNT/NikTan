@@ -62,5 +62,6 @@
 
   .info {
     font-size: 2vh;
+    justify-content: flex-start;
   }
 }

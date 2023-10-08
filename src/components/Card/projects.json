@@ -75,5 +75,34 @@
         "icon": "/images/api.png"
       }
     ]
+  },
+  {
+    "id": "4",
+    "title": "WorkoutBuddy - MERN Workout Recorder App",
+    "description": "Effortlessly track workouts with our MERN app. Add titles and reps with ease, supported by secure authentication and MongoDB Atlas integration. With robust authentication protocols, your data is kept secure, and our seamless integration with MongoDB Atlas ensures smooth performance for an optimized experience.",
+    "image": "/images/project-4.png",
+    "link": "https://github.com/NikNT/MERN-Workout-Buddy",
+    "technologiesUsed": [
+      {
+        "name": "Mongo",
+        "icon": "/images/mongo.png"
+      },
+      {
+        "name": "Express",
+        "icon": "/images/express.png"
+      },
+      {
+        "name": "React",
+        "icon": "/images/react.png"
+      },
+      {
+        "name": "Node",
+        "icon": "/images/node.png"
+      },
+      {
+        "name": "JWT",
+        "icon": "/images/jwt.png"
+      }
+    ]
   }
 ]
