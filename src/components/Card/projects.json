@@ -23,7 +23,8 @@
         "name": "AWS Cognito",
         "icon": "/images/aws-cognito.png"
       }
-    ]
+    ],
+    "border": "red"
   },
   {
     "id": "2",
@@ -56,7 +57,8 @@
         "name": "Docker",
         "icon": "/images/docker.png"
       }
-    ]
+    ],
+    "border": "green"
   },
   {
     "id": "3",
@@ -74,7 +76,8 @@
         "name": "API",
         "icon": "/images/api.png"
       }
-    ]
+    ],
+    "border": "blue"
   },
   {
     "id": "4",
@@ -103,6 +106,7 @@
         "name": "JWT",
         "icon": "/images/jwt.png"
       }
-    ]
+    ],
+    "border": "yellow"
   }
 ]

@@ -6,7 +6,10 @@ import projects from "./projects.json";
 const Card = () => {
   return projects.map((project) => (
     <>
-      <div className={styles.card_container}>
+      <div
+        className={styles.card_container}
+        style={{ borderTop: `3px solid ${project.border}` }}
+      >
         <div className={styles.project_image}>
           <img src={project.image} alt="Sample Image" />
         </div>
