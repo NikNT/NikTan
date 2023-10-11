@@ -1,78 +1,39 @@
-import { useState, useEffect } from "react";
+// import React from "react";
 import styles from "./Test.module.css";
-
-const sections = [
-  {
-    backgroundText: "Me",
-    cardContent: (
-      <>
-        <p>Hi</p>
-        <p>Im Nikhil</p>
-        <p>I love ReactJS, XBox Series S, and Pizza 🍕</p>
-      </>
-    ),
-  },
-  {
-    backgroundText: "Tech Stack",
-    cardContent: (
-      <>
-        <p>HTML5 CSS3 JavaScript TypeScript</p>
-        <p>ReactJS NextJS</p>
-        <p>Bootstrap TailwindCSS SASS</p>
-      </>
-    ),
-  },
-  {
-    backgroundText: "Experience",
-    cardContent: (
-      <>
-        <p>Worked in a budding Ed-Tech Company in Punjab, India</p>
-        <p>
-          Collaborated with UI/UX Designers, Back End Developers to develop and
-          maintain mission critical business systems
-        </p>
-        <p>
-          Gained first-hand professional experience related to Web Design and
-          Development.
-        </p>
-      </>
-    ),
-  },
-  {
-    backgroundText: "Fav Quote",
-    cardContent: (
-      <>
-        <p>
-          One last drink and the bottle breaks, returning us to the dust from
-          whence we came
-        </p>
-      </>
-    ),
-  },
-];
+import youtube from "../../assets/youtube.png";
+import twitter from "../../assets/twitter.png";
+import github from "../../assets/github-nobg.png";
+import linkedin from "../../assets/linkedin.png";
+import link from "../../assets/link.png";
 
 const Test = () => {
-  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSectionIndex((prevIndex) => (prevIndex + 1) % sections.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className={styles.app}>
-      <div className={styles.section_container}>
-        <div className={`${styles.background_text} ${styles.fade}`}>
-          {sections[currentSectionIndex].backgroundText}
-        </div>
-        <div className={`${styles.card} ${styles.fade}`}>
-          {sections[currentSectionIndex].cardContent}
-        </div>
+    <footer className={styles.footer}>
+      <div className={styles.connect}>
+        <p>Connect with Me</p>
+        <img src={link} alt="Link" />
       </div>
-    </div>
+      <div className={styles.social_icons}>
+        <a
+          href="https://www.youtube.com/@frontendmechanix/videos"
+          target="blank"
+        >
+          <img src={youtube} alt="YouTube" className={styles.social_icon} />
+        </a>
+        <a href="https://twitter.com/FE_Mechanix" target="blank">
+          <img src={twitter} alt="Twitter" className={styles.social_icon} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/nikhil-tanwar-76b247128/"
+          target="blank"
+        >
+          <img src={linkedin} alt="LinkedIn" className={styles.social_icon} />
+        </a>
+        <a href="https://github.com/NikNT" target="blank">
+          <img src={github} alt="GitHub" className={styles.social_icon} />
+        </a>
+      </div>
+    </footer>
   );
 };
 
