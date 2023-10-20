@@ -13,13 +13,20 @@ const Footer = () => {
         </figure>
         <div className={styles.message}>
           <p>
+            I believe in the power of continuous improvement, and your feedback
+            is invaluable in helping me grow as a developer.
+          </p>
+          <p>
+            Whether you're interested in collaborating on a project, have a
+            question about my work, or just want to connect, don't hesitate to
+            reach out.
+          </p>
+          <p>
             Thanks for scrolling through my portfolio. I really appreciate it.
             If you liked something, do not forget to message me about it. If you
             did not, I would love to have any suggestion.
-            <br />
-            <br />
-            <p>Send a message to connect with me!</p>
           </p>
+          <p>Send a message to connect with me!</p>
         </div>
         <FooterForm />
       </div>
